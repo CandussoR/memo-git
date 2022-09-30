@@ -1,36 +1,34 @@
 # Git :
 ## Commandes :
--**git commit**
-Comme un snapshot du projet, qui consigne les derniers changements
-	    effectués
-	    Chaque commit référence le commit précédent, sur lequel il se base.
+- **git commit** 
+Comme un snapshot du projet, qui consigne les derniers changements effectués  
+Chaque commit référence le commit précédent, sur lequel il se base.
 
--**git branch nomBranche** :
- 	    Les branches sont des références à un commit.
-	    Elles sont peu coûteuses en mémoire.
-	    Checkout permet de se positionner sur une nouvelle branche,
-	    sans quoi le commit avance sans la branche.
+- **git branch nomBranche** :
+Les branches sont des références à un commit.
+Elles sont peu coûteuses en mémoire.
+Checkout permet de se positionner sur une nouvelle branche,
+sans quoi le commit avance sans la branche.
 
-			```git 
-			git checkout nomBranche; git commit
-			```
+```git 
+git checkout nomBranche; git commit
+```
 
-	    nous positionne sur nomBranche,
-	    sur laquelle on commit nos modifs.
+nous positionne sur nomBranche,
+sur laquelle on commit nos modifs.
 
--**git merge brancheQuonMerge** :
-	    permet d'intégrer le contenu d'une branche à une autre (d'origine).		   Crée un commit à deux parents (qui eux-mêmes incluent leurs parents		  ).
+- **git merge brancheQuonMerge** :
+permet d'intégrer le contenu d'une branche à une autre (d'origine). Crée un commit à deux parents (qui eux-mêmes incluent leurs parents).
 
-			```git
-			git checkout nomBranche: git merge main
-			```
+```git
+git checkout nomBranche: git merge main
+```
 
--**git rebase nomBranche**
-	   pour faire la même chose que merge, maintient la linéarité des
-	   commits. 
-	   Rebase une branche crée une copie en amont de main,
-		on se repositionne dessus,
-		et fait un rebase sur la branche rebased.
+- **git rebase nomBranche** :
+pour faire la même chose que merge, maintient la linéarité des commits. 
+Rebase une branche crée une copie en amont de main:
+	- on se repositionne dessus,
+	- et fait un rebase sur la branche rebased.
 
 	
 ## Déplacements dans Git:
