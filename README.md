@@ -1,27 +1,31 @@
 # Git :
    ## Commandes :
-        git commit
+       ** git commit **
 	    Comme un snapshot du projet, qui consigne les derniers changements
 	    effectués
 	    Chaque commit référence le commit précédent, sur lequel il se base.
 
-	git branch nomBranche
+	** git branch nomBranche **
  	    Les branches sont des références à un commit.
 	    Elles sont peu coûteuses en mémoire.
 	    Checkout permet de se positionner sur une nouvelle branche,
 	    sans quoi le commit avance sans la branche.
 
+			```git 
 			git checkout nomBranche; git commit
+			```
 
 	    nous positionne sur nomBranche,
 	    sur laquelle on commit nos modifs.
 
-	git merge brancheQuonMerge
+	** git merge brancheQuonMerge **
 	    permet d'intégrer le contenu d'une branche à une autre (d'origine).		   Crée un commit à deux parents (qui eux-mêmes incluent leurs parents		  ).
 
+			```git
 			git checkout nomBranche: git merge main
+			```
 
-	git rebase nomBranche
+	**git rebase nomBranche**
 	   pour faire la même chose que merge, maintient la linéarité des
 	   commits. 
 	   Rebase une branche crée une copie en amont de main,
@@ -33,7 +37,7 @@
 	HEAD : nom symbolique du commit le plus récent dans l'arbre des commit.
 	       On se déplace sur head en utilisant le hash d'un commit.
 
-	git log:
+	**git log** :
 		permet de trouver les commits auxquels on peut remonter via
 		le commit actuel.
 	
@@ -45,21 +49,27 @@
 
 	   On peut aussi utiliser HEAD comme référence relative.
 
+		```git
 		git checkout HEAD~4
+		```
 
 	   retourne 4 commits en arrière.
 	
-	Permettent de réorganiser les branches.
+	  Permettent de réorganiser les branches.
 		
-	   git branch -f main HEAD~3
-	bouge de force la branche main à trois parents derrière HEAD.
+		```git
+	        git branch -f main HEAD~3
+		```
+	  bouge de force la branche main à trois parents derrière HEAD.
 
-	git reset
-	git revert
+	**git reset
+	git revert**
 		annulent tous deux des changements.
 
 		git reset fait revenir la branche en arrière
+			```git
 			git reset HEAD~1
+			```
 
 		git revert s'utilise pour des cas où l'annulation doit être
 		partagée. Introduit un nouveau commit. Permet de push.
