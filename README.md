@@ -1,11 +1,11 @@
 # Git :
-   ## Commandes :
-       ** git commit **
-	    Comme un snapshot du projet, qui consigne les derniers changements
+## Commandes :
+-**git commit**
+Comme un snapshot du projet, qui consigne les derniers changements
 	    effectués
 	    Chaque commit référence le commit précédent, sur lequel il se base.
 
-	** git branch nomBranche **
+-**git branch nomBranche** :
  	    Les branches sont des références à un commit.
 	    Elles sont peu coûteuses en mémoire.
 	    Checkout permet de se positionner sur une nouvelle branche,
@@ -18,14 +18,14 @@
 	    nous positionne sur nomBranche,
 	    sur laquelle on commit nos modifs.
 
-	** git merge brancheQuonMerge **
+-**git merge brancheQuonMerge** :
 	    permet d'intégrer le contenu d'une branche à une autre (d'origine).		   Crée un commit à deux parents (qui eux-mêmes incluent leurs parents		  ).
 
 			```git
 			git checkout nomBranche: git merge main
 			```
 
-	**git rebase nomBranche**
+-**git rebase nomBranche**
 	   pour faire la même chose que merge, maintient la linéarité des
 	   commits. 
 	   Rebase une branche crée une copie en amont de main,
@@ -33,15 +33,15 @@
 		et fait un rebase sur la branche rebased.
 
 	
-    ## Déplacements dans Git:
-	HEAD : nom symbolique du commit le plus récent dans l'arbre des commit.
+## Déplacements dans Git:
+-**HEAD** : nom symbolique du commit le plus récent dans l'arbre des commit.
 	       On se déplace sur head en utilisant le hash d'un commit.
 
-	**git log** :
+-**git log** :
 		permet de trouver les commits auxquels on peut remonter via
 		le commit actuel.
 	
-	commits relatifs :
+-**commits relatifs** :
 	    revenir en arrière avec ^
 	    revenir de plusieurs enarrière avec ~<num>
 		
@@ -62,8 +62,7 @@
 		```
 	  bouge de force la branche main à trois parents derrière HEAD.
 
-	**git reset
-	git revert**
+-**git reset / git revert**:
 		annulent tous deux des changements.
 
 		git reset fait revenir la branche en arrière
