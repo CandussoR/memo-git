@@ -122,8 +122,11 @@ Les commits relatifs simplifient la navigation :
       git fetch; git rebase <branche distante>; git push
     ```
 
-### Dans une grande équipe :
-  Le push de commit sur main peut être verrouillé.
-  Processus : créer une branche, push, pull request.
+## Dans une grande équipe
+  Le push de commit sur main peut être verrouillé.  
+  Processus : créer une branche, push, pull request.  
   En cas d'oubli de la branche, créer une autre branche "feature", push, reset la branche main.
 
+## du HTTPS au SSH
+  On peut modifier l'accès au repo du HTTPS au SSh avec :
+  `git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`
