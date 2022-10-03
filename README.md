@@ -1,6 +1,5 @@
 <h1 align="center">Memo Git</h1>
 
-
 ## Dépôts locaux
 - **HEAD** :  
 nom symbolique du commit le plus récent dans l'arbre des commits. On peut déplacer HEAD et le détacher en utilisant le nom d'un commit plutôt que celui d'une branche.
@@ -122,11 +121,20 @@ Les commits relatifs simplifient la navigation :
       git fetch; git rebase <branche distante>; git push
     ```
 
+- **git fork**:
+  Github fait une copie d'un repo qui est entièrement à soi, et vers lequel on peut push des modifications.
+
 ## Dans une grande équipe
   Le push de commit sur main peut être verrouillé.  
   Processus : créer une branche, push, pull request.  
   En cas d'oubli de la branche, créer une autre branche "feature", push, reset la branche main.
 
-## du HTTPS au SSH
-  On peut modifier l'accès au repo du HTTPS au SSh avec :
-  `git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`
+## Du HTTPS au SSH
+  On peut modifier l'accès au repo du HTTPS au SSh avec :  
+  `git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`  
+  Git arrête à ce moment de demander le nom d'utilisateur et le mot de passe, et demande une passphrase s'il y en a une.
+
+## Utilisateur Git
+- **git config** :
+  On peut voir les paramètres de configuration de git à l'aide de `git config --list`.  
+  Pour modifier des paramètres d'utilisateur (username et email, ici), on utilise `git config --global user.name "<username>"` et `git config --global user.email "thisis@example.com"`.
