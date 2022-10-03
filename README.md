@@ -1,5 +1,7 @@
 <h1 align="center">Memo Git</h1>
 
+
+## Dépôts locaux
 - **HEAD** :  
 nom symbolique du commit le plus récent dans l'arbre des commits. On peut déplacer HEAD et le détacher en utilisant le nom d'un commit plutôt que celui d'une branche.
 
@@ -87,3 +89,41 @@ Les commits relatifs simplifient la navigation :
     ```
       git push origin --tags
     ```
+
+## Dépôts distants
+- **git clone** :  
+  permet de copier localement un repo distant.
+  Crée une branche distante ; détache la tête si on se rend sur celle-ci.
+  Les branches distantes sont nommées par convention `<nom depo distant>/<nom branche>`.
+  o/branche ne se met à jour que quand le dépôt distant est mis à jour.
+
+- **git fetch** :  
+  permet de rapporter des données depuis un dépôt distant.
+  Les branches distantes se mettent à jour en concordance avec la nouvelle version du repo distant.
+  - télécharge les commits du repo distant absent du repo local ;
+  - met à jour les branches distantes.
+  - **ne met pas à jour les branches locales**, ne change rien aux fichiers locaux.
+
+- **git pull** :  
+  fait à la fois un `fetch` et un `merge`.
+
+- **git push** :
+  envoie les changements dans un repo local sur le repo distant.
+  En situation de travail par équipe, si notre commit repose sur un commit qui n'est plus le dernier du repo distant, impossible de push.
+  Deux solutions :  
+  - Résoudre avec fetch et rebase ;
+     ```
+      git fetch; git rebase <branche distante>; git push
+    ```
+    D'abord on récupère les données, on rebase nos modifs et les envoie.
+    Un raccourci de ces commandes est `git pull --rebase`.
+  - Utiliser merge.
+    ```
+      git fetch; git rebase <branche distante>; git push
+    ```
+
+### Dans une grande équipe :
+  Le push de commit sur main peut être verrouillé.
+  Processus : créer une branche, push, pull request.
+  En cas d'oubli de la branche, créer une autre branche "feature", push, reset la branche main.
+
