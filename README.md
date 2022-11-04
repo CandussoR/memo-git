@@ -138,3 +138,10 @@ Les commits relatifs simplifient la navigation :
 - **git config** :
   On peut voir les paramètres de configuration de git à l'aide de `git config --list`.  
   Pour modifier des paramètres d'utilisateur (username et email, ici), on utilise `git config --global user.name "<username>"` et `git config --global user.email "thisis@example.com"`.
+  
+ 
+## En cas de détachage de tête
+- Si le tête se retrouve détaché d'une branche sur laquelle on travaille pourtant, il faut remettre la branche distante à niveau avec :
+  ```
+  git branch -f <branche-en-arrière> HEAD
+  ```
