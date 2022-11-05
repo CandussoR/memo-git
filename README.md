@@ -145,3 +145,12 @@ Les commits relatifs simplifient la navigation :
   ```
   git branch -f <branche-en-arrière> HEAD
   ```
+
+## Du repo local au repo github
+- `git init` pour installer git dans notre projet ;
+- `git add . && git commit -m "Initial Commit (ou autre)"` ;
+- on crée son repo Github ;
+- on récupère sa clé SSH ;
+- on revient à la ligne de commande ;
+- `git remote add origin <clé SSH>` ;
+- `git push origin master`.
