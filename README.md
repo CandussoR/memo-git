@@ -141,7 +141,7 @@ Les commits relatifs simplifient la navigation :
   
  
 ## En cas de détachage de tête
-- Si le tête se retrouve détaché d'une branche sur laquelle on travaille pourtant, il faut remettre la branche distante à niveau avec :
+- Si la tête se retrouve détaché d'une branche sur laquelle on travaille pourtant, il faut remettre la branche distante à niveau avec :
   ```
   git branch -f <branche-en-arrière> HEAD
   ```
@@ -154,3 +154,9 @@ Les commits relatifs simplifient la navigation :
 - on revient à la ligne de commande ;
 - `git remote add origin <clé SSH>` ;
 - `git push origin master`.
+
+## Ajouter tous les fichiers sauf...
+- Il existe maintenant une commande pour ajouter tous les fichiers ayant subi des modifications sauf certains (je te vois `public/css/app/css`) :
+  ```
+  git add --all -- ':!path/to/file1' ':!path/to/file2' ':!path/to/folder1/*'
+  ```
