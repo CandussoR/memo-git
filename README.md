@@ -88,7 +88,16 @@ Les commits relatifs simplifient la navigation :
     ```
       git push origin --tags
     ```
-
+- **Delete a branch**:
+  - To delete a local branch :
+    ```
+    git branch -d <nombranche>
+    ```
+  - To delete a remote branch :
+    ```
+    git push origin -d <nombranche>
+    ```
+    
 ## Dépôts distants
 - **git clone** :  
   permet de copier localement un repo distant.
