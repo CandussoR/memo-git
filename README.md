@@ -169,3 +169,14 @@ Les commits relatifs simplifient la navigation :
   ```
   git add --all -- ':!path/to/file1' ':!path/to/file2' ':!path/to/folder1/*'
   ```
+
+## Modifier le message du dernier commit 
+- Pour la doc, cf [Github](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message) :
+   ```
+   git commit --amend
+   ```
+   permet de modifier le message du dernier commit. S'il est déjà poussé en ligne :  
+   ```
+   git push --force-with-lease origin <nom-de-branche>
+   ```  
+   Mais cette dernière opération nn'est vraiment pratique que si personne n'a pull le dernier commit, sans quoi chacun semble devoir faire des modifs à la mano. Cf la doc.
