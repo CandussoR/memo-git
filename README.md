@@ -180,3 +180,9 @@ Les commits relatifs simplifient la navigation :
    git push --force-with-lease origin <nom-de-branche>
    ```  
    Mais cette dernière opération nn'est vraiment pratique que si personne n'a pull le dernier commit, sans quoi chacun semble devoir faire des modifs à la mano. Cf la doc.
+   
+## Mettre à jour les branches locales par rapport à un repo distant
+- ... quand des branches ont été supprimées :  
+  ```git
+  git remote update origin --prune
+  ```
